@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<body class="bg-gradient">
+<div class="card">
+    <h2>Login</h2>
+
+    <form action="/login" method="post">
+        <input name="username" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button>Login</button>
+    </form>
+
+    <p>New user? <a href="/register">Register</a></p>
+</div>
+</body>

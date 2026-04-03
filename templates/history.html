@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<body style="text-align:center">
+
+<h2>History</h2>
+
+<table border="1" style="margin:auto">
+<tr>
+    <th>Age</th><th>BP</th><th>Sugar</th><th>Risk</th>
+</tr>
+
+{% for row in data %}
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+    <td>{{ row[3] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+<br>
+<a href="/dashboard">Back</a>
+
+</body>

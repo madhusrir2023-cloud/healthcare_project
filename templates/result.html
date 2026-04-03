@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<body style="text-align:center">
+
+<h1>Result</h1>
+<h2 class="result">Risk: {{ risk }}</h2>
+
+<canvas id="chart"></canvas>
+
+<script>
+new Chart(document.getElementById('chart'), {
+    type: 'bar',
+    data: {
+        labels: ['Age','BP','Sugar'],
+        datasets: [{
+            label: 'Values',
+            data: [{{ age }}, {{ bp }}, {{ sugar }}]
+        }]
+    }
+});
+</script>
+
+<br>
+<a href="/dashboard">Back</a>
+</body>

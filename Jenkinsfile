@@ -15,15 +15,15 @@ pipeline {
             }
         }
 
-        stage('Test Application') {
+        stage('Test Code') {
             steps {
                 bat 'python -m py_compile app.py'
             }
         }
 
-        stage('Success') {
+        stage('Finish') {
             steps {
-                echo 'Build Successful!'
+                echo 'Build Completed Successfully!'
             }
         }
 
